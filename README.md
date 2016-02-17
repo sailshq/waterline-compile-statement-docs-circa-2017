@@ -1,5 +1,7 @@
 # Waterline Query Docs
 
+> NOTE: This is for the next generation of Waterline Query Syntax and is not valid in the current version of Waterline.
+
 This will document the declarative query syntax used in the Waterline Query Builder
 notation. Through this syntax you should be able to compose complex queries that
 can run on both a SQL data store or a NoSQL data store. The language is completely
@@ -8,8 +10,10 @@ by an adapter and interpreted to be run on that particular database. It is highl
 influenced by a relational sequel language but should be normalized enough to
 be converted into NoSql queries as well.
 
-For familiarity the generated SQL query is shown next to each example using the
-PostgreSQL dialect. The equivalent MongoDB query is also shown.
-
 
 ### Table of Contents
+
+* [Overview](docs/overview.md)
+* [Finding Records](docs/read-operations.md)
+* [Writing Records](docs/write-operations.md)
+* [Glossary](docs/glossary.md)
