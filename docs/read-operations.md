@@ -56,6 +56,7 @@ See the [Criteria](criteria.md) docs for a full list of available options.
     name: 'bob'
   }
 }
+```
 
 #### Modifiers
 
