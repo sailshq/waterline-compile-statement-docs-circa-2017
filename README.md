@@ -19,5 +19,6 @@ be converted into NoSql queries as well.
 * [Aggregations](docs/aggregations.md)
 * Extensions
   * [PostgreSQL Schema](docs/pg-schema.md)
+  * [Sub Queries](docs/sub-queries.md)
   * [Joins](docs/joins.md)
 * [Glossary](docs/glossary.md)
