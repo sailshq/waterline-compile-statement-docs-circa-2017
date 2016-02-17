@@ -17,4 +17,6 @@ be converted into NoSql queries as well.
 * [Finding Records](docs/read-operations.md)
 * [Writing Records](docs/write-operations.md)
 * [Aggregations](docs/aggregations.md)
+* Extensions
+  * [PostgreSQL Schema](docs/pg-schema.md)
 * [Glossary](docs/glossary.md)
