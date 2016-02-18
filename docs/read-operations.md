@@ -72,7 +72,7 @@ Modifiers modify the records that will be returned. This is useful when you want
 }
 ```
 
-* Offset will specify where the returned results should start. It is useful for implementing paged results and is typically used with `limit` to create paginated result sets. The value used for `offset` must always be a positive integer.
+* Skip will specify where the returned results should start. It is useful for implementing paged results and is typically used with `limit` to create paginated result sets. The value used for `skip` must always be a positive integer.
 
 ```javascript
 {
