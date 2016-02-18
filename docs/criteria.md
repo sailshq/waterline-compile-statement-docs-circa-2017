@@ -90,6 +90,22 @@ A query may also specify a comparison operator to be used. Operators are specifi
 }
 ```
 
+* Between `<`/`>` selects records whose field is between the specified values (exclusive).
+
+```javascript
+{
+  select: ['*'],
+  from: 'users',
+  where: {
+    age: {
+      '>': 64,
+      '<': 101
+    }
+  }
+}
+```
+
+
 #### Conditions
 
 A condition is used to either combine multiple criteria clauses or to negate an operator or a set of operators. The following conditions are supported:
