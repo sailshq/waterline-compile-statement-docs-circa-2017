@@ -13,7 +13,11 @@ Counts the number of records in the table.  If a `where` clause is specified, on
     is_active: true
   }
 }
+
+// e.g.
+// => 3980
 ```
+
 
 
 ## Sum
@@ -24,12 +28,15 @@ Determines the [sum](https://en.wikipedia.org/wiki/Summation) of the specified n
 
 ```javascript
 {
-  sum: 'products',
-  from: 'users',
+  sum: 'pre_tax_total',
+  from: 'orders',
   where: {
     is_active: true
   }
 }
+
+// e.g.
+// => 9385383.20
 ```
 
 ## Avg
@@ -47,4 +54,7 @@ Determines the [average](https://en.wikipedia.org/wiki/Arithmetic_mean) of the s
     is_active: true
   }
 }
+
+// e.g.
+// => 37.2398
 ```
