@@ -90,7 +90,7 @@ A query may also specify a comparison operator to be used. Operators are specifi
 }
 ```
 
-> To filter by range, and to combine multiple different sub-attribute modifiers in general, use `and` (described below).
+> To filter by range and, more generally, to combine multiple operators (e.g. `>`/`<`/`in`/etc), use `and` (described below).
 
 
 
