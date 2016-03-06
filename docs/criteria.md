@@ -90,20 +90,9 @@ A query may also specify a comparison operator to be used. Operators are specifi
 }
 ```
 
-* Between `<`/`>` selects records whose field is between the specified values (exclusive).
+> To filter by range, and to combine multiple different sub-attribute modifiers in general, use `and` (described below).
 
-```javascript
-{
-  select: ['*'],
-  from: 'users',
-  where: {
-    age: {
-      '>': 64,
-      '<': 101
-    }
-  }
-}
-```
+
 
 
 #### Conditions
@@ -204,6 +193,30 @@ You can mix both `AND` and `OR` statements together to form complex where clause
   }
 }
 ```
+
+* It also allows you to combine multiple sub-attribute modifiers:
+
+```javascript
+{
+  select: ['*'],
+  from: 'users',
+  where: {
+    and: [
+      {
+        age: { '>': 64 }
+      },
+      {
+        age: { '<=': 101 }
+      },
+      {
+        age: { '>': 64 }
+      }
+    ]
+  }
+}
+```
+
+
 
 * `NOT` can be used to negate a condition.
 
