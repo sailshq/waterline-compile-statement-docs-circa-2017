@@ -41,7 +41,7 @@ The successful result data from a query that fetched, joined, or aggregated a se
 ]
 ```
 
-Each item in the result array is a dictionary (`{}`) that corresponds with an individual record or virtual record (e.g. "count") returned from the database.  Guaranteed to be JSON-compatible (Date instances will be cast to tz-agnostic ISO strings).
+Each item in the result array is a dictionary (`{}`) that corresponds with an individual record returned from the database.  Guaranteed to be JSON-compatible (Date instances will be cast to tz-agnostic ISO 6801, aka JSON timestamp, strings).
 
 
 
