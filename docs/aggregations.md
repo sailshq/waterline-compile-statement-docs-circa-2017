@@ -1,7 +1,7 @@
-## Aggregations
+# Aggregations
 
 
-#### Count
+## Count
 
 Counts the number of records in the table.  If a `where` clause is specified, only records which match will be counted.
 
