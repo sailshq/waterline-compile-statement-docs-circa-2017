@@ -92,6 +92,20 @@ A query may also specify a comparison operator to be used. Operators are specifi
 
 > To filter by range and, more generally, to combine multiple operators (e.g. `>`/`<`/`in`/etc), use `and` (described below).
 
+* Like (`like`) selects records where the value of the field is LIKE (in a SQL sense) the provided % expression.
+
+```javascript
+{
+  select: ['*'],
+  from: 'users',
+  where: {
+    name: {
+      like: 'Mrs. % Stark'
+    }
+  }
+}
+```
+
 
 
 
