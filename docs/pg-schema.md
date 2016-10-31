@@ -17,27 +17,31 @@ Since individual queries can reach across multiple schemas in PostgreSQL, schema
 
 ```javascript
 {
-  select: '*',
+  select: ['*'],
   from: 'accounts',
   opts: {
     schema: 'foo'
   },
   where: {
-    id: {
-      in: {
-        select: ['id'],
-        from: 'users',
-        opts: {
-          schema: 'foo'
-        },
-        where: {
-          or: [
-            { status: 'active' },
-            { name: 'John' }
-          ]
+    and: [
+      {
+        id: {
+          in: {
+            select: ['id'],
+            from: 'users',
+            opts: {
+              schema: 'foo'
+            },
+            where: {
+              or: [
+                { status: 'active' },
+                { name: 'John' }
+              ]
+            }
+          }
         }
       }
-    }
+    ]
   }
 }
 ```

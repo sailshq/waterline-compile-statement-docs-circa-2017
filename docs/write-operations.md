@@ -33,7 +33,11 @@ An `update` operation is defined using the `update` key and the `using` key. Upd
   },
   // Criteria to use
   where: {
-    publishedDate: { '>': 2000 }
+    and: [
+      {
+        publishedDate: { '>': 2000 }
+      }
+    ]
   },
   // Table to use
   using: 'books'
@@ -54,7 +58,11 @@ A `delete` operation is defined using the `del` key as `delete` is a reserved wo
   from: 'accounts',
   // Criteria to use
   where: {
-    activated: false
+    and: [
+      {
+        activated: false
+      }
+    ]
   }
 }
 ```

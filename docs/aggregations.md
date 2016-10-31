@@ -10,7 +10,11 @@ Counts the number of records in the table.  If a `where` clause is specified, on
   count: true,
   from: 'users',
   where: {
-    is_active: true
+    and: [
+      {
+        is_active: true
+      }
+    ]
   }
 }
 
@@ -31,7 +35,11 @@ Determines the [sum](https://en.wikipedia.org/wiki/Summation) of the specified n
   sum: 'pre_tax_total',
   from: 'orders',
   where: {
-    is_active: true
+    and: [
+      {
+        is_active: true
+      }
+    ]
   }
 }
 
@@ -51,7 +59,11 @@ Determines the [average](https://en.wikipedia.org/wiki/Arithmetic_mean) of the s
   avg: 'age',
   from: 'users',
   where: {
-    is_active: true
+    and: [
+      {
+        is_active: true
+      }
+    ]
   }
 }
 

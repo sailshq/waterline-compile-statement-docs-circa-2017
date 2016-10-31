@@ -1,6 +1,6 @@
 ## Overview
 
-Waterline queries are self contained dictionaries that contain all the information needed to perform a query. They are database independent and can be run on either a SQL database such as MySQL or PostgreSQL or on a NoSQL database such as MongoDB.
+Waterline statements are self contained dictionaries that contain all the information needed to perform a query. They are database independent and can be run on either a SQL database such as MySQL or PostgreSQL or on a NoSQL database such as MongoDB.
 
 #### Queries
 
@@ -15,9 +15,13 @@ In the following example you will see the various pieces that make up a Waterlin
   from: 'user',
   // Criteria
   where: {
-    age: {
-      '>': 18
-    }
+    and: [
+      {
+        age: {
+          '>': 18
+        }
+      }
+    ]
   },
   // Modifiers
   orderBy: [
@@ -44,9 +48,13 @@ In the following example you will see the various pieces that make up a Waterlin
   using: 'books',
   // Criteria to filter the records by
   where: {
-    publishedDate: {
-      '>': 2000
-    }
+    and: [
+      {
+        publishedDate: {
+          '>': 2000
+        }
+      }
+    ]
   },
 }
 ```

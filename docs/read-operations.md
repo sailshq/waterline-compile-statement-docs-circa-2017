@@ -12,7 +12,11 @@ In Waterline all read operations are defined using the `select` key in the query
   from: 'users',
   // Criteria
   where: {
-    name: 'bob'
+    and: [
+      {
+        name: 'bob'
+      }
+    ]
   },
   // Modifiers
   limit: 10
@@ -53,7 +57,11 @@ See the [Criteria](criteria.md) docs for a full list of available options.
   from: 'users',
   // Criteria
   where: {
-    name: 'bob'
+    and: [
+      {
+        name: 'bob'
+      }
+    ]
   }
 }
 ```

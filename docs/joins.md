@@ -28,7 +28,7 @@ Joins are specified as an array of join conditions. Each condition is represente
 
 ```javascript
 {
-  select: '*',
+  select: ['*'],
   from: 'users',
   innerJoin: [
     {
@@ -46,7 +46,7 @@ Joins are specified as an array of join conditions. Each condition is represente
 
 ```javascript
 {
-  select: '*',
+  select: ['*'],
   from: 'users',
   leftJoin: [
     {
@@ -64,7 +64,7 @@ Joins are specified as an array of join conditions. Each condition is represente
 
 ```javascript
 {
-  select: '*',
+  select: ['*'],
   from: 'users',
   leftOuterJoin: [
     {
@@ -84,7 +84,7 @@ Joins are specified as an array of join conditions. Each condition is represente
 
 ```javascript
 {
-  select: '*',
+  select: ['*'],
   from: 'users',
   rightJoin: [
     {
@@ -102,7 +102,7 @@ Joins are specified as an array of join conditions. Each condition is represente
 
 ```javascript
 {
-  select: '*',
+  select: ['*'],
   from: 'users',
   rightOuterJoin: [
     {
@@ -120,7 +120,7 @@ Joins are specified as an array of join conditions. Each condition is represente
 
 ```javascript
 {
-  select: '*',
+  select: ['*'],
   from: 'users',
   outerJoin: [
     {
@@ -138,7 +138,7 @@ Joins are specified as an array of join conditions. Each condition is represente
 
 ```javascript
 {
-  select: '*',
+  select: ['*'],
   from: 'users',
   fullOuterJoin: [
     {
@@ -156,7 +156,7 @@ Joins are specified as an array of join conditions. Each condition is represente
 
 ```javascript
 {
-  select: '*',
+  select: ['*'],
   from: 'users',
   crossJoin: [
     {

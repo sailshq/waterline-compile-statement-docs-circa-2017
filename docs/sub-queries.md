@@ -13,21 +13,25 @@ list of values.
 
 ```javascript
 {
-  select: '*',
+  select: ['*'],
   from: 'accounts',
   where: {
-    id: {
-      in: {
-        select: ['id'],
-        from: 'users',
-        where: {
-          or: [
-            { status: 'active' },
-            { name: 'John' }
-          ]
+    and: [
+      {
+        id: {
+          in: {
+            select: ['id'],
+            from: 'users',
+            where: {
+              or: [
+                { status: 'active' },
+                { name: 'John' }
+              ]
+            }
+          }
         }
       }
-    }
+    ]
   }
 }
 ```
@@ -66,7 +70,11 @@ The subquery can only return one column value.
     select: ['age'],
     from: 'users',
     where: {
-      age: 21
+      and: [
+        {
+          age: 21
+        }
+      ]
     }
   }
 }
