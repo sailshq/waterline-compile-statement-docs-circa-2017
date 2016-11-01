@@ -266,7 +266,7 @@ You can mix both `AND` and `OR` statements together to form complex where clause
 
 
 
-* `NOT` can be used to negate a condition.
+* `NOT` and `NIN` can be used to negate a condition.
 
 ```javascript
 {
@@ -275,8 +275,8 @@ You can mix both `AND` and `OR` statements together to form complex where clause
   where: {
     and: [
       {
-        not: {
-          type: 'food'
+        type: {
+          not: 'food'
         }
       }
     ]
@@ -291,10 +291,8 @@ You can mix both `AND` and `OR` statements together to form complex where clause
   where: {
     and: [
       {
-        not: {
-          shoeSize: {
-            in: [8,9,10]
-          }
+        shoeSize: {
+          nin: [8,9,10]
         }
       }
     ]
