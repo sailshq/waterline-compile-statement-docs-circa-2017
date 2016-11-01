@@ -96,7 +96,7 @@ A query may also specify a comparison operator to be used. Operators are specifi
 }
 ```
 
-* IN `in` selects records where the value of the field equals any of the values in the list.
+* Not Equal `!=` selects records whose field is not equal to the specified value.
 
 ```javascript
 {
@@ -105,8 +105,44 @@ A query may also specify a comparison operator to be used. Operators are specifi
   where: {
     and: [
       {
+        age: {
+          '!=': 20
+        }
+      }
+    ]
+  }
+}
+```
+
+* IN `in` selects records where the value of the field equals any of the values in the list.
+
+```javascript
+{
+  select: ['*'],
+  from: 'inventory',
+  where: {
+    and: [
+      {
         shoeSize: {
           in: [8,9,10]
+        }
+      }
+    ]
+  }
+}
+```
+
+* Not In `nin` selects records where the value of the field does not equal any of the values in the list.
+
+```javascript
+{
+  select: ['*'],
+  from: 'inventory',
+  where: {
+    and: [
+      {
+        shoeSize: {
+          nin: [8,9,10]
         }
       }
     ]
@@ -258,42 +294,6 @@ You can mix both `AND` and `OR` statements together to form complex where clause
       },
       {
         age: { '>': 64 }
-      }
-    ]
-  }
-}
-```
-
-
-
-* `NOT` and `NIN` can be used to negate a condition.
-
-```javascript
-{
-  select: ['*'],
-  from: 'inventory',
-  where: {
-    and: [
-      {
-        type: {
-          not: 'food'
-        }
-      }
-    ]
-  }
-}
-```
-
-```javascript
-{
-  select: ['*'],
-  from: 'inventory',
-  where: {
-    and: [
-      {
-        shoeSize: {
-          nin: [8,9,10]
-        }
       }
     ]
   }
