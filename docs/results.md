@@ -27,7 +27,7 @@ The successful result data from a query that inserted a new record.
 
 | Property              | Type             | Details
 |-----------------------|------------------|:----------------------------------------------------------------------------------------------------------|
-| `inserted`            | ((json))         | The primary key value of the newly inserted record.  It is either a number or a string.
+| `inserted`            | ((json))         | The primary key value of the newly inserted record.  It is either a number or a string.  Or if multiple records were inserted, this is an array of the primary key values.
 
 
 
