@@ -25,5 +25,4 @@
 | ------------ | --------------------------------------------------------
 | statement    | e.g. `{ select: ['title', 'author'], from: 'books', where: {title: 'robinson crusoe'} }`
 | clause       | e.g. `from: 'books'` or `select: ['title', 'author']`.
-| predicate    | e.g. `title = 'robinson crusoe'`
-| expression   | e.g. `'robinson crusoe'`
+| expression   | e.g. `title = 'robinson crusoe'`
