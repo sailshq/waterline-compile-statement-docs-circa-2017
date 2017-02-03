@@ -1,6 +1,6 @@
 # Waterline Query Docs
 
-> NOTE: The documentation in this repo is the next-generation of Waterline query syntax and is not valid in the current version of Waterline.
+> NOTE: The documentation in this repo is the next-generation of Waterline query syntax and is not valid in the 0.11 version of Waterline.
 
 This repo documents the Waterline Statement format, expected results, and error notation used by queryable [Waterline drivers](https://github.com/node-machine/driver-interface).  While the query syntax defined here will look familiar to anyone who has worked with Waterline or MongoDB, bear in mind that it represents a _lower-level abstraction_, and has important differences from the criteria dictionaries you might be used to working with when calling methods like `.find()`.
 
