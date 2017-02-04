@@ -3,7 +3,7 @@
 In the "Queryable" interface layer, raw errors returned from sending native queries can be parsed using `parseNativeQueryError()`.  The output is one of a set of standardized **error footprints**:
 
 | Footprint             | Potential Source Queries | Error Description
-|-----------------------|--------------------------|:-----------------------------------------------------------------------------------|
+|:----------------------|:-------------------------|:-----------------------------------------------------------------------------------|
 | notUnique             | `update`, `insert`       | The query failed because it would violate one or more uniqueness constraints.
 | catchall              | _any_                    | The error from the query cannot be identified as any other known kind of query footprint.
 
